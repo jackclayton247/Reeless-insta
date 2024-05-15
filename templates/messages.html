@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Thread{% endblock %}
+{% block content %}
+    {% for i in range(length) %}
+        {% if messages[i][2] == True %}
+            <h1>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ {{messages[i][4]}}</h1>
+        {% else %}
+            <h1>{{messages[i][4]}}</h1>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+

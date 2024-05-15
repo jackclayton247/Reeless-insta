@@ -1,0 +1,73 @@
+<RV>:
+    viewclass: 'rvItem'
+    RecycleBoxLayout:
+        spacing: 10
+        default_size: None, dp(56)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'
+
+<LoginWindow>:
+    GridLayout:      
+        spacing:10
+        cols:1
+        size: root.width, root.height
+
+        Image:
+            source: root.logo
+            allow_stretch: True
+            keep_ratio:False
+            size_hint_y:0.2
+        
+        GridLayout:
+            cols:1
+            padding:20
+            BoxLayout:
+                orientation: "vertical"
+                GridLayout:
+                    cols:2
+                    Label:
+                        text:"Username:"
+                        size_hint:(1, 0.05) 
+
+                    TextInput:
+                        id:username
+                        multiline:False
+                        size_hint:(1, 0.05)
+
+                    Label:
+                        text:"Password:"
+                        size_hint:(1, 0.05)
+
+                    TextInput:
+                        id:password
+                        multiline:False
+                        size_hint:(1, 0.05)
+
+            Button:
+                text:"send"
+                size_hint: (1, 1)
+                on_press:
+                    root.get_text()
+        Label:
+            text:"This is an app built to take your instagram account and display the messanger part of it infront of you. It was built so that you could have a distraction free experience."
+            size: (500, 250)
+            text_size: self.size
+            padding: 20
+            size_hint_y:(0.45)
+        Label:
+            text:"limitations: This app is not fully complete yet so it has some bugs still. Long paragraphs get cut off. You cannot see sender of message in group chat. Message is occasionally unavailable."
+            size: (500, 250)
+            text_size: self.size
+            padding: 20
+            size_hint_y:(0.45)
+        
+        
+
+
+
+
+
+
+        

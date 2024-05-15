@@ -1,0 +1,21 @@
+from kivy.app import App
+from kivy.uix.button import Button
+from kivy.uix.textinput import TextInput
+from kivy.uix.boxlayout import BoxLayout
+
+class MyTextInputApp(App):
+    def build(self):
+        layout = BoxLayout(orientation='vertical')
+        
+        # Create a button
+        button = Button(text='Button')  # Arbitrary height
+        layout.add_widget(button)
+        
+        # Create a text input
+        text_input = TextInput(text='Enter text here', font_size=20, size_hint_y=None, height=40)  # Set height to font size
+        layout.add_widget(text_input)
+        
+        return layout
+
+if __name__ == '__main__':
+    MyTextInputApp().run()

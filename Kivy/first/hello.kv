@@ -1,0 +1,49 @@
+LoginScreen:
+
+<Button>:
+    bold: True
+    background: "#70e4ef"
+
+
+<MainBox>:
+    orientation: "horizontal"
+    Label:
+        text: "this is label1"
+
+    Button:
+        text: "this is Button1"
+
+<LoginScreen>:
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        Image:
+            source: "ryan_1.jpg"
+
+        GridLayout:
+            cols:2
+            Label:
+                text: "Username"
+            TextInput:
+                id: username
+                multiline: False
+                padding_y: 20, 10
+        Button:
+            id: btn1
+            text: "Send"
+            on_press:
+                checkout.text = "logged in as" + username.text 
+                self.background_color = (1, 0, 0, 0.5)
+
+        Label:
+            id: checkout
+            color: "#70e4ef"
+            text: ""
+
+        MainBox:
+
+
+
+
+            

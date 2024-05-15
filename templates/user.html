@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% block title %}User page{% endblock %}
 {% block content %}
-<h1> Messages </h1>
-{% i=0 %}
-{% for id in thread_ids %}
-    {% pi = profile_info[i] %}
-    <h2> {{id}}{{pi}} </h2>
-    {% i+=1 %}
-{% endfor %}
+    <h1> Messages </h1>
+    {% for i in range(length) %}
+        <form action="" method = "post">
+        <button type="submit" name="new_id" value={{thread_ids[i]}}>{{profile_info[i][2]}}</button>             
+        </form>
+    {% endfor %}
 {% endblock %}
